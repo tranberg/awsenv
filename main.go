@@ -67,6 +67,8 @@ func main() {
 	out := ""
 	out += fmt.Sprintf("export AWS_ACCESS_KEY_ID='%s'; ", key)
 	out += fmt.Sprintf("export AWS_SECRET_ACCESS_KEY='%s'; ", secret)
+	out += fmt.Sprintf("export TF_VAR_aws_access_key='%s'; ", key)
+	out += fmt.Sprintf("export TF_VAR_aws_secret_key='%s'; ", secret)
 	if len(keyname) > 0 {
 		out += fmt.Sprintf("export AWS_KEYNAME='%s'; ", keyname)
 	} else {
